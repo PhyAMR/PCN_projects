@@ -1,0 +1,53 @@
+# Appendix: Project 45 {#sec-app-p45}
+
+<!-- NOT counted in the 10-page budget. Course rule allows up to 5
+     supplementary pages per task. Use this space aggressively: any
+     table, derivation or extra figure that threatens the body budget
+     belongs here, with a pointer from the body. -->
+
+## Run inventory and integrity checks {#sec-app-p45-runs}
+
+<!-- Full per-run table: run id, engine, mechanism switches, seed,
+     epochs, wall time, output size, row counts per file, integrity
+     verdict. One page maximum. -->
+
+## Network file conventions {#sec-app-p45-files}
+
+<!-- Directory tree of the exported snapshots, full column
+     specification for node and edge files (name, type, units,
+     allowed values), and one worked example: five node rows and five
+     edge rows from a real snapshot. -->
+
+## Additional statistics {#sec-app-p45-extra}
+
+<!-- Degree distributions per epoch, component-size distributions,
+     modularity partition sizes, per-scenario versions of
+     @fig-p45-stats - everything that did not fit in chapter 2. -->
+
+## Optional extensions {#sec-app-p45-extensions}
+
+<!-- One short subsection per extension actually attempted:
+     ablation comparison, multiplex overlap between L_t and M_t,
+     early descriptors as survival predictors, structural RAF versus
+     dynamic flux networks, lineage-level functional-profile networks.
+     Each: what was done, one figure or table, one-sentence result. -->
+
+# Appendix: Project 24 {#sec-app-p24}
+
+## Derivation details {#sec-app-p24-derivation}
+
+<!-- The steps compressed out of chapter 6: the sum defining C_q(x),
+     the explicit H~_{1,q}(x), the beta_q counting argument, and the
+     ER and scale-free specialisations written out in full. -->
+
+## Numerical methods {#sec-app-p24-numerics}
+
+<!-- Fixed-point and bisection tolerances, q_max used in the strategy
+     search, graph sizes, number of realisations, seeds, runtimes.
+     Include the convergence check: threshold estimate versus N. -->
+
+## Supplementary figures {#sec-app-p24-figs}
+
+<!-- Gain surfaces over (z, strategy), sensitivity of p_c to the
+     cutoff kappa and to gamma, finite-size scaling for the
+     small-world threshold. -->

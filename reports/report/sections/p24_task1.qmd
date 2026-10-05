@@ -1,0 +1,76 @@
+# Entanglement percolation: model and strategies
+
+**Task leader(s):** Méndez Rodríguez de Tembleque, Álvaro
+
+<!-- PAGE BUDGET: 1 page. Theory setup only. No results.
+     Target: ~2/3 page of text + the q-swap schematic. -->
+
+*Project 24 (score 0.6). Reproduction of Cuquet and Calsamiglia,
+"Entanglement Percolation in Quantum Complex Networks", PRL 103, 240503
+(2009) [@cuquet2009entanglement].*
+
+## Setting
+
+<!-- ~10 lines. Build the object in this order, one sentence each:
+     - a quantum network is a graph whose edges are two copies of a
+       pure partially entangled state |psi> = sqrt(l0)|00> +
+       sqrt(l1)|11>, l0 >= l1;
+     - the singlet conversion probability (SCP) of a single copy is
+       p = min[1, 2(1 - l0)];
+     - two copies without distillation give p_2 = 2p - p^2; with
+       distillation the largest Schmidt coefficient of |psi>^{x2} gives
+       p_2 = min(1, 2p - p^2/2). Define "with/without distillation"
+       here once and use the terms consistently afterwards;
+     - classical entanglement percolation (CEP) = apply the conversion
+       independently to every edge, so the network becomes bond
+       percolation with occupation probability p_2;
+     - once a path of singlets exists, entanglement swapping connects
+       the endpoints, so two arbitrary nodes are connected with
+       probability S^2 where S is the GCC relative size.
+     Cite [@acin2007entanglement] for CEP and [@cuquet2009entanglement]
+     throughout. -->
+
+$$
+p \;=\; \min\!\left[1,\, 2(1-\lambda_0)\right],
+\qquad
+p_2 \;=\;
+\begin{cases}
+2p - p^2, & \text{without distillation},\\[2pt]
+\min\!\left(1,\, 2p - p^2/2\right), & \text{with distillation}.
+\end{cases}
+$$ {#eq-scp}
+
+## The $q$-swap
+
+<!-- ~8 lines + the schematic. Explain:
+     - entanglement swapping at a central node c: a Bell measurement on
+       two qubits belonging to states shared with a and b creates an
+       edge a-b with the same SCP p as the original edges;
+     - the q-swap performs swaps between successive pairs of neighbours
+       of a degree-q node, turning a q-star into a q-cycle and
+       detaching the central node;
+     - the operation is LOCAL: it needs only the target's degree and
+       the status of its neighbours;
+     - constraint: no two q-swaps on neighbouring sites;
+     - the strategy is specified by the set {gamma_q}, the probability
+       of applying a q-swap on degree-q nodes. Note the paper's result
+       that the optimum has every gamma_q in {0, 1}.
+     Figure: redraw Fig. 1 of the paper (star -> cycle) in R or TikZ.
+     Small - one third of the text width. -->
+
+::: {#fig-p24-qswap}
+*[figure placeholder --- `figures/p24/qswap.pdf`, schematic redrawn from the paper]*
+<!-- replace with: ![](../figures/p24/qswap.pdf){width=100%} -->
+
+Entanglement swapping (left) and the $5$-swap transformation (right):
+a $q$-star centred on the measured node becomes a $q$-cycle, and the
+central node is detached. Redrawn after [@cuquet2009entanglement].
+:::
+
+## What is reproduced here
+
+<!-- 4 lines. State the scope of the reproduction so the grader knows
+     what to expect: analytic thresholds and GCC size for ER and for
+     scale-free with exponential cutoff (ch.6-7), numerical check on
+     small-world networks (ch.8). Say explicitly what is NOT done
+     (noise, multipartite strategies). -->

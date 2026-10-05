@@ -1,0 +1,64 @@
+# Erdős–Rényi and scale-free networks
+
+**Task leader(s):** Méndez Rodríguez de Tembleque, Álvaro
+
+<!-- PAGE BUDGET: 1 page. Reproduces Fig. 2 of the paper.
+     Layout target: 4-panel figure at ~55% of the page, the rest text. -->
+
+*Project 24. Analytic results checked against Monte Carlo simulation.*
+
+## Erdős–Rényi
+
+<!-- ~8 lines. Give G_0(x) = G_1(x) = exp[z(x-1)], the classical
+     threshold 1/z = p_2, and the two closed forms quoted in the paper:
+
+       2-swap:  1/z = p_2 + e^{-z}[-p_2 + z(2p - p^2)]
+       3-swap:  1/z = p_2 + z e^{-z}[-p_2 + z(1 + p - p^2)]
+
+     Then report YOUR numbers: the gain Delta as a function of z for
+     2-swap, {2,3}-swap, {2,3,4}-swap and the optimal strategy.
+     State the headline reproduction: a maximum gain of about 20% with
+     distillation (24% without), against 3% (16%) for the
+     honeycomb -> triangular transformation of [@acin2007entanglement].
+     If your maximum differs by more than ~1 point, say so and give the
+     likely reason rather than hiding it. -->
+
+## Scale-free with exponential cutoff
+
+<!-- ~6 lines. P(k) = C k^{-gamma} e^{-k/kappa}. Note that pure
+     power laws have a GCC for all p, so a threshold exists only with a
+     cutoff (attacks, physical constraints, saturation). Use gamma = 1
+     as in the paper and sweep kappa. Report the maximum gain (~25%
+     with distillation) and where in kappa it occurs. -->
+
+## Numerical validation
+
+<!-- ~6 lines describing the Monte Carlo, then the figure.
+     Simulation recipe, stated explicitly because it is the graded part:
+     - generate the graph (igraph: sample_gnm / sample_degseq);
+     - occupy each edge independently with probability p_2;
+     - apply the q-swap set: select degree-q nodes greedily or at
+       random subject to the no-neighbouring-swap constraint, rewire the
+       star into a cycle, occupy cycle edges with probability p;
+     - measure the largest component with components();
+     - N = 10^5 is enough for the report; the paper uses 10^6. Say which
+       you used and how many realisations you averaged. Show error bars
+       or state that they are smaller than the marker. -->
+
+::: {#fig-p24-er-sf}
+*[figure placeholder --- `figures/p24/er_sf.pdf`, produced by `code/02_simulate.R`]*
+<!-- replace with: ![](../figures/p24/er_sf.pdf){width=100%} -->
+
+(a) Gain $\Delta$ in the ER model versus mean degree $z$ for the
+$2$-swap, $\{2,3\}$-swap, $\{2,3,4\}$-swap and optimal strategies.
+(b) GCC size versus $p$ for $z=2.5$ without distillation, before and
+after the $\{2,3\}$-swap; points are simulations, lines are
+@eq-stilde. (c) As (a) for the scale-free model with $\gamma=1$,
+versus the cutoff $\kappa$. (d) GCC size for a real WWW sample with
+degree cutoff $k=15$. Compare with Fig. 2 of
+[@cuquet2009entanglement].
+:::
+
+<!-- ~4 lines closing: agreement between lines and points; and the
+     paper's observation that S~ stays below S even at p = 1 because
+     q-swap detaches the target nodes - hence the corrected S^. -->

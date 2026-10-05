@@ -1,0 +1,52 @@
+
+!/theoretical_projects/
+!/data_pprojects/
+
+/theoretical_projects/*
+!/theoretical_projects/topic_08_quantum_networks/
+
+/theoretical_projects/topic_08_quantum_networks/*
+!/theoretical_projects/topic_08_quantum_networks/project_24/
+
+/data_pprojects/*
+!/data_pprojects/project_45/
+
+main_files/
+/report/
+sources/
+
+*.html
+
+# EvoSim raw simulation output: ~208 MB, fully regenerable from
+# project_45/code/run_simulations.sh + the seeds in each run_manifest.json.
+# The cleaned tables under data/clean/ and the exported node/edge files
+# under data/networks/ are the actual deliverables and stay tracked.
+/data_pprojects/project_45/data/raw/
+
+# Data & generated outputs: kept on disk, not in git (see ~/data/README.md)
+*.pickle
+*.pkl
+*.npy
+*.npz
+*.dat
+*.h5
+*.hdf5
+*.fits
+*.gz
+*.zip
+*.tar
+DATA/
+data/raw/
+data/processed/
+.ipynb_checkpoints/
+__pycache__/
+.venv/
+_freeze/
+*_files/
+.quarto/
+*.synctex.gz
+*.aux
+*.log
+*.fdb_latexmk
+*.fls
+.claude/

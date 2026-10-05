@@ -1,0 +1,70 @@
+# Network structure and eco-evolutionary dynamics
+
+**Task leader(s):** Méndez Rodríguez de Tembleque, Álvaro
+
+<!-- PAGE BUDGET: 2 pages. Objectives 4 and 5.
+     Layout target:
+       page 1 = overlay figure + coupling table
+       page 2 = event-window analysis + short discussion -->
+
+*Project 45. Objectives 4--5: do the reconstructed networks track
+population-level quantities, and does structure change **before** a
+transition?*
+
+## Population-level observables
+
+<!-- ~6 lines, no subsections. Name the series and their source file:
+     population size and type abundance (simulation_log.csv,
+     type_abundance.csv), energy and biomass
+     (dynamic_energy_biomass_budget.csv), diversity
+     (diversity_timeseries.csv), extinction-risk proxy (define it -
+     e.g. rolling decline rate of N, or ex_post_fitness.csv), RAF
+     persistence (raf_persistence.csv), qESS candidates
+     (qess_like_states.csv).
+     One sentence on normalisation (z-scores over the run) so the
+     overlay figure is readable. -->
+
+## Joint dynamics
+
+<!-- ONE figure, ~40% page, two stacked panels sharing the x-axis:
+     (a) population observables, (b) network descriptors from
+     @fig-p45-stats. Mark the detected transition epochs with vertical
+     dashed lines and label them (collapse, diversification,
+     reorganisation). ~5 lines of text pointing at the figure. -->
+
+::: {#fig-p45-overlay}
+*[figure placeholder --- `figures/p45/overlay.pdf`, produced by `code/04_coupling.R`]*
+<!-- replace with: ![](../figures/p45/overlay.pdf){width=100%} -->
+
+Network descriptors overlaid on population-level observables, run
+`rich_punctuated`. Dashed lines mark detected transitions.
+:::
+
+## Quantitative coupling
+
+<!-- ~8 lines + ONE table {#tbl-p45-lag}.
+     Table: rows = (network descriptor, population observable) pairs you
+     care about; columns = Spearman rho at lag 0, best lag (in epochs),
+     rho at best lag, sign.
+     Report cross-correlation over lags in, say, [-20, +20] epochs.
+     State the null you use (circular shift or block bootstrap) and the
+     significance threshold - a grader will look for this. Do NOT claim
+     causality; say "leads/lags" and nothing stronger. -->
+
+## Structure before transitions {#sec-p45-transitions}
+
+<!-- ~15 lines. This is objective 5 and the highest-value paragraph in
+     the project. Structure it as:
+     - how you define a transition window (e.g. +/- 15 epochs around a
+       detected collapse / diversification / RAF reorganisation);
+     - what changes in the pre-window: give 2-3 concrete numbers
+       (modularity of M_t rises from x to y; turnover of L_t spikes
+        k epochs before N drops; number of components in M_t splits);
+     - whether the early-warning signal is present in ONE network, in
+       BOTH, or in NEITHER - a negative result stated cleanly is worth
+       more than a vague positive one;
+     - one sentence on qESS-like persistence: are the plateaus in
+       qess_like_states.csv matched by plateaus in the descriptors?
+     If you attempted the optional extension "early descriptors predict
+     survival", the one-line result goes here and the detail in
+     @sec-app-p45-extensions. -->

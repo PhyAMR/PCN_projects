@@ -1,0 +1,19 @@
+# Task title...
+
+**Task leader(s):** Author name(s)...
+
+_Structure as[^structure]:_
+
+- A short (max 1 page) explanation of the task, including references. Include mathematical concepts.
+- Max 2 pages for the whole task (including figures)
+- It is possible to use appendices for supplementary material, at the end of the report. Max 5 pages per task
+
+A total of 3 pages + 5 supplementary pages per task.
+
+[^structure]: Remove this part from the report.
+
+## A section...
+
+Reference examples: book [@barrat2008dynamical], article [@de2013mathematical], website [@weforumProtectingCritical]
+
+## Another section...

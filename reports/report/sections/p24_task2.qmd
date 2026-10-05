@@ -1,0 +1,86 @@
+# Generating-function theory of $q$-swap percolation
+
+**Task leader(s):** Méndez Rodríguez de Tembleque, Álvaro
+
+<!-- PAGE BUDGET: 1 page. Pure derivation, no figures.
+     This chapter is dense equations + connective prose. Keep every
+     equation numbered and referenced later. Anything longer than the
+     page goes to @sec-app-p24-derivation. -->
+
+*Project 24. Analytic treatment of random graphs with arbitrary
+uncorrelated degree distribution.*
+
+## Classical baseline
+
+<!-- ~6 lines. Introduce G_0 and G_1, then the two consistency
+     equations. Say in one sentence why generating functions are the
+     right tool: convolution of component-size distributions becomes
+     composition. -->
+
+$$
+G_0(x)=\sum_{k\ge 0}P(k)x^k,
+\qquad
+G_1(x)=\frac{G_0'(x)}{G_0'(1)},
+$$ {#eq-gf}
+
+$$
+H_1(x) = \bigl(1-p_2\bigr) + p_2\, x\,G_1\!\bigl(H_1(x)\bigr),
+\qquad
+H_0(x) = x\,G_0\!\bigl(H_1(x)\bigr).
+$$ {#eq-h}
+
+<!-- ~4 lines: u = H_1(1) satisfies u = 1 - p_2 + p_2 G_1(u); p_c is the
+     smallest p at which a solution u < 1 appears; S = 1 - G_0(u); and
+     <s> = H_0'(1) diverges at the transition. -->
+
+## After the $q$-swap
+
+<!-- ~10 lines. Walk the reader through the modification:
+     following an edge into a degree-q node on which a q-swap was
+     performed, one no longer reaches a q-1 star but a q-cycle whose
+     links have SCP p (not p_2). Summing over the length l of the
+     connected string of vertices reached inside the cycle gives C_q(x),
+     Eq. (2) of the paper; H~_1 then picks up one term per active
+     q-swap, Eq. (3). Reproduce both. Then state the detaching
+     correction in H~_0 and the definition of beta_q (probability that
+     no neighbouring q'-swap was performed), including the compact
+     single-type approximation beta_q ~ [1 + q P_1(q)/2]^{-1}. -->
+
+$$
+\tilde H_1(x) = 1-p_2 + p_2\,x\,G_1\!\bigl(\tilde H_1(x)\bigr)
++ \sum_{q\ge 2}\gamma_q\,\tilde H_{1,q}(x).
+$$ {#eq-h1tilde}
+
+<!-- Follow with H~_{1,q}(x) and C_q(x). Then: -->
+
+$$
+\tilde H_0(x) = x\,G_0\!\bigl(\tilde H_1(x)\bigr)
++ x\sum_{q\ge2}\gamma_q\beta_q P(q)\Bigl\{1-\bigl[\tilde H_1(x)\bigr]^q\Bigr\},
+\qquad
+\tilde S = 1-\tilde H_0(1).
+$$ {#eq-stilde}
+
+## Solving in practice
+
+<!-- ~6 lines. This is what makes the chapter yours rather than a copy:
+     say how you actually solve it in R.
+     - fixed-point iteration on u = H~_1(1), or uniroot() on
+       f(u) = u - H~_1(1; u);
+     - threshold p~_c located by bisection on p, detecting the first p
+       for which a root u < 1 exists (tolerance, max iterations);
+     - the optimal strategy is found by exhaustive search over the
+       2^{q_max - 1} binary vectors {gamma_q} for q_max ~ 8, since each
+       gamma_q is 0 or 1;
+     - define the gain once, and use it in every later figure:
+         Delta = (p~_c - p_c)/p_c   (negative = improvement).
+     Note the corrected quantity S^ = S~ S_inf / S~_inf that accounts
+     for nodes detached by the q-swap, since Fig. 2(b) needs it. -->
+
+## Bethe lattice sanity check
+
+<!-- 4 lines, no figure. Insert G_0 = x^q, G_1 = x^{q-1} and recover
+     (q-1)^{-1} = p_2 classically, and
+     (q-1)^{-1} = (1-p)^{-1}{2p + p^q[p(q-1)-(q+1)]} after the q-swap.
+     State the paper's conclusion: q-swap always helps except for the
+     1D chain (q = 2). This is the cheapest correctness check of the
+     whole implementation - report the numbers your code gives. -->

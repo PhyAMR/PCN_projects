@@ -1,0 +1,23 @@
+project:
+  type: default
+  render:
+    - main.qmd
+  output-dir: ../../../../reports
+
+format:
+  pdf:
+    documentclass: report
+    pdf-engine: pdflatex
+    toc: false
+    titlepage: false
+    title-block: false
+    citation-package: natbib
+    biblio-style: plainnat
+    include-in-header:
+      - base/packages.tex
+      - base/style.tex
+      - base/quarto-header.tex
+    include-before-body: sections/front_page.tex
+  html:
+    theme: cosmos
+    toc: true

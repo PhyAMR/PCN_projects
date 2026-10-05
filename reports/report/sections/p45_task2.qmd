@@ -1,0 +1,99 @@
+# Reconstructed networks and temporal statistics
+
+**Task leader(s):** Méndez Rodríguez de Tembleque, Álvaro
+
+<!-- PAGE BUDGET: 2 pages. Objectives 2 and 3, plus the node/edge file
+     deliverable. Core of the project - do not let it spill into task 3.
+     Layout target:
+       page 1 = definitions + file schema + snapshot figure
+       page 2 = statistics figure (2x3 panels) + short reading -->
+
+*Project 45. Objectives 2--3: at least two network representations from
+the same trajectories, and their temporal statistics.*
+
+## Two network definitions {#sec-p45-defs}
+
+### Lineage network $L_t$
+
+<!-- ~8 lines. Define precisely:
+     nodes = organisms alive at epoch t (or lineage IDs - pick one and
+     say which); edges = parent -> offspring, from lineages.csv.
+     DIRECTED, UNWEIGHTED. Say what you do with the founding generation
+     (no parent) and with organisms whose parent already died.
+     Give the snapshot rule: does L_t hold births in (t-1, t], or the
+     cumulative forest truncated at t? State it. -->
+
+### Metabolic co-activity network $M_t$
+
+<!-- ~10 lines. nodes = organisms alive at epoch t; for each build the
+     flux vector f_i over the four reactions R1..R4 from
+     dynamic_metabolic_fluxes.csv (epoch, organism_id, reaction_id,
+     flux); edge weight w_ij = cosine(f_i, f_j), kept above a stated
+     threshold. UNDIRECTED, WEIGHTED.
+     Say, in one or two lines each and without apology:
+     - why this and not a catalyst -> reaction network: the chemistry
+       is a fixed 4-reaction / 6-molecule set and catalysis_events.csv
+       is a 4-row static map with no epoch column, so there is no
+       temporal catalysis network in these outputs;
+     - that the 4-dimensional flux space makes M_t a coarse instrument;
+     - that M_t is undefined for the legacy_baseline scenario, which
+       emits no flux products.
+     Carry RAF membership per organism-epoch from
+     compartment_raf_membership.csv as a node attribute.
+     Threshold sensitivity goes in @sec-app-p45-extra. -->
+
+### Summary of network types
+
+<!-- Small table {#tbl-p45-nets}: network | nodes | edges | directed? |
+     weighted? | source file | snapshot rule.
+     The brief explicitly asks for the directed/weighted statement, so
+     make it a table cell, not a buried sentence. -->
+
+## Snapshot file schema
+
+<!-- ~6 lines + two inline code blocks showing ONE header line each,
+     exactly as the brief requires:
+
+       nodes:  nodeID nodeLabel type epoch <attrs>
+       edges:  nodeID_from nodeID_to weight epoch
+
+     List the extra attributes you carry (lineage: birth_epoch, type_id,
+     alive; co-activity: n_active_reactions, total_flux, in_raf).
+     Say how many
+     snapshots you export per run and at which epochs. Full path
+     convention goes in @sec-app-p45-files, not here. -->
+
+## Snapshot visualisation
+
+<!-- ONE figure, half a page max, 2x2 panels:
+     (a) L_t early, (b) L_t late, (c) M_t early, (d) M_t late.
+     Same layout algorithm and same colour key across panels.
+     Caption states the run id and the epochs. -->
+
+::: {#fig-p45-snapshots}
+*[figure placeholder --- `figures/p45/snapshots.pdf`, produced by `code/02_networks.R`]*
+<!-- replace with: ![](../figures/p45/snapshots.pdf){width=100%} -->
+
+Lineage ($L_t$) and metabolic co-activity ($M_t$) snapshots for run
+`rich_punctuated_10x`, before and after the collapse at epoch 205.
+:::
+
+## Temporal statistics {#sec-p45-stats}
+
+<!-- ONE multi-panel figure, six panels, x-axis = epoch, both networks
+     overlaid in each panel:
+       N(t), E(t), number of connected components,
+       mean degree (or degree-distribution entropy / fitted exponent),
+       average clustering, modularity (Louvain), turnover.
+     Define turnover in the text - the only equation this chapter needs:
+       tau_t = 1 - |V_t n V_{t+1}| / |V_t u V_{t+1}|
+     Then ~10 lines *describing* the curves: which move together, where
+     the breakpoints are. Interpretation belongs to task 3. -->
+
+::: {#fig-p45-stats}
+*[figure placeholder --- `figures/p45/temporal_stats.pdf`, produced by `code/03_stats.R`]*
+<!-- replace with: ![](../figures/p45/temporal_stats.pdf){width=100%} -->
+
+Temporal network statistics for $L_t$ and $M_t$ over run
+`rich_punctuated`.
+:::

@@ -1,0 +1,56 @@
+# Scenario comparison and interpretation
+
+**Task leader(s):** Méndez Rodríguez de Tembleque, Álvaro
+
+<!-- PAGE BUDGET: 1 page. Objectives 6 and 7 + optional extensions +
+     limitations. Keep it to one table, one short figure or none, and
+     tight prose. -->
+
+*Project 45. Objectives 6--7: comparison across simulation scenarios,
+and which representation is most informative.*
+
+## Across scenarios
+
+<!-- ~4 lines + ONE table {#tbl-p45-scenarios}.
+     Rows = the four ablation_rich scenarios: legacy baseline, metabolic
+     + generated RAF, metabolic + open chemistry, hybrid transition.
+     Columns = a small fixed descriptor set evaluated at a common epoch
+     (or averaged over the last quarter of the run): |V|, |E|,
+     components, clustering, modularity, mean turnover, RAF persistence.
+     Report mean +/- sd over seeds if you ran replicates; if you ran one
+     seed per scenario, say so explicitly and treat the comparison as
+     qualitative. -->
+
+## Which representation is most informative
+
+<!-- ~10 lines. Answer objective 7 directly and defend it on two
+     criteria, both already computed above:
+     (i) discrimination - does the descriptor separate the four
+         scenarios in @tbl-p45-scenarios?
+     (ii) sensitivity - does it respond at or before the transitions in
+          @sec-p45-transitions?
+     Expected shape of the answer: the lineage network is the better
+     demographic bookkeeper (turnover tracks births and deaths almost by
+     construction, so it is sensitive but not very informative), while
+     the metabolic co-activity network carries the organisational signal
+     (modularity, component splitting) that actually distinguishes
+     chemistry regimes. Say which one you would keep if forced to pick
+     one, and why. -->
+
+## Optional extensions
+
+<!-- 3-5 lines TOTAL, one sentence per extension attempted, each ending
+     with a pointer to its appendix section. Do not expand here - the
+     page budget does not allow it.
+     Candidates: ablation comparison across mechanism switches;
+     multiplex overlap between L_t and M_t; early descriptors as
+     survival predictors; structural RAF vs dynamic flux networks;
+     lineage-level networks of inherited functional profiles. -->
+
+## Limitations
+
+<!-- ~5 lines. Be specific, not ritual: single seed per scenario,
+     snapshot granularity, the cosine threshold in M_t, the fact that
+     the flux space is only 4-dimensional, the fact that turnover in L_t is partly definitional, and
+     finite-size effects at low population. One closing sentence on the
+     natural follow-up. -->

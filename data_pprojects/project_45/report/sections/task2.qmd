@@ -1,0 +1,39 @@
+# Network reconstruction and temporal statistics
+
+**Task leader(s):** Author name(s)...
+
+_Covers project objectives 2 and 3 — reconstruction of at least two network representations from the same EvoSim trajectories and computation of temporal network statistics on the reconstructed snapshots._
+
+## Network definitions
+
+### First reconstructed network type
+
+### Second reconstructed network type
+
+### Weighted / unweighted, directed / undirected
+
+## Snapshot schema and file format
+
+### Node files
+
+### Edge files
+
+### Temporal aggregation
+
+## Temporal network statistics
+
+### Number of nodes and edges
+
+### Connected components
+
+### Degree distribution
+
+### Clustering
+
+### Modularity
+
+### Turnover
+
+## Visualisations
+
+### Snapshot comparison

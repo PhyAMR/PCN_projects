@@ -1,0 +1,41 @@
+# Coupling network evolution to eco-evolutionary dynamics
+
+**Task leader(s):** Author name(s)...
+
+_Covers project objectives 4 and 5 — comparison between network evolution and population-level quantities, and analysis of whether network structure changes before collapse, diversification, qESS-like persistence, or metabolic reorganization._
+
+## Population-level observables
+
+### Population size and type abundance
+
+### Energy and biomass budgets
+
+### Diversity metrics
+
+### Extinction-risk proxies
+
+### RAF persistence
+
+### Candidate qESS-like states
+
+## Joint visualisation of network and population dynamics
+
+### Overlay of network descriptors on population time series
+
+### Identification of transitions
+
+## Quantitative coupling
+
+### Correlation and lagged-correlation analysis
+
+### Lead-lag between structural change and demographic events
+
+## Structural change around transitions
+
+### Pre- and post-collapse network state
+
+### Diversification events
+
+### qESS-like persistence
+
+### Metabolic reorganization

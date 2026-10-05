@@ -1,0 +1,25 @@
+---
+title: "Project # 45: Network reconstruction from EvoSim eco-evolutionary trajectories "
+subtitle: "Physics of Complex Networks: Structure and Dynamics"
+author: "Surname, name"
+date: last-modified
+bibliography: bibliography.bib
+nocite: |
+  @hordijk2004raf
+---
+
+```{=latex}
+\clearpage\pagenumbering{arabic}
+```
+
+{{< include sections/project.md >}}
+
+{{< include sections/task1.qmd >}}
+
+{{< include sections/task2.qmd >}}
+
+{{< include sections/task3.qmd >}}
+
+{{< include sections/task4.qmd >}}
+
+{{< include sections/references.qmd >}}

@@ -1,0 +1,35 @@
+# EvoSim simulation design and trajectory data
+
+**Task leader(s):** Author name(s)...
+
+_Covers project objective 1 — selection or generation of EvoSim simulation outputs — and the "cleaned EvoSim trajectory data" deliverable._
+
+## Background and motivation
+
+## Simulation engine and dynamics
+
+### Modern metabolic engine
+
+### Legacy baseline engine
+
+## Scenarios and configurations
+
+### Smoke sanity check
+
+### Main multispecies run
+
+### Long-horizon run
+
+### Ablation scenario matrix
+
+## Output organisation and preprocessing
+
+### Files retained as cleaned trajectory data
+
+### Cleaning and harmonisation rules
+
+## Reproducibility
+
+### Seeds and provenance
+
+### Integrity and biological-event reports

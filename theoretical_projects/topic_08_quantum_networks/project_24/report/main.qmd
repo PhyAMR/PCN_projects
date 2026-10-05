@@ -1,0 +1,19 @@
+---
+title: "Project # 24: Entanglement percolation"
+subtitle: "Physics of Complex Networks: Structure and Dynamics"
+author: "Surname, name"
+date: last-modified
+bibliography: bibliography.bib
+---
+
+```{=latex}
+\clearpage\pagenumbering{arabic}
+```
+
+{{< include sections/task1.qmd >}}
+
+{{< include sections/task2.qmd >}}
+
+{{< include sections/task3.qmd >}}
+
+{{< include sections/task4.qmd >}}

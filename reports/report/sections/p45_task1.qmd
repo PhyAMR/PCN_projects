@@ -1,0 +1,68 @@
+# EvoSim simulations and cleaned trajectory data
+
+**Task leader(s):** Méndez Rodríguez de Tembleque, Álvaro
+
+<!-- PAGE BUDGET: 1 page. Objective 1 + deliverable "cleaned EvoSim
+     trajectory data". No network content here.
+     Target: ~2/3 page of text + one scenario table. -->
+
+*Project 45 (score 1.2). Objective 1: selection or generation of EvoSim
+simulation outputs.*
+
+## The simulator and what it emits
+
+<!-- ~12 lines. Cover, in prose:
+     - what EvoSim is (mechanism-oriented artificial-life simulator,
+       eco-evolutionary dynamics in a chemically structured grid);
+     - modern metabolic engine vs legacy engine, one sentence each,
+       and why the modern engine is the default here;
+     - the three output families you actually consume, named by file:
+       population (simulation_log.csv, simulation_organisms.csv),
+       lineage (lineages.csv, type_abundance.csv), chemistry
+       (dynamic_metabolic_fluxes.csv is the temporal one;
+       reaction_network.json, active_reactions.csv and
+       autocatalytic_sets.csv are static, raf_persistence.csv is
+       ex-post).
+     Cite the EvoSim docs entry in bibliography.bib [@evosim]. -->
+
+## Scenarios
+
+<!-- ONE table, no more than 3 lines of prose above it. Columns:
+     run id | epochs run | seed | pop. at end | max pop. | purpose.
+     These are the runs actually in data/raw/ (all gates passed):
+
+       smoke_modern          3 epochs, seed 4242, end 3, max 3
+       rich_punctuated     120 epochs, seed 4242, end 46, max 149
+       rich_punctuated_10x 205 epochs, seed 4242, end 0, max 149
+                           -- configured for 1200; the engine stops when
+                              no organisms remain, so this is a genuine
+                              extinction at epoch 205, not a truncation.
+                              SAY THIS EXPLICITLY - it is the collapse
+                              that chapter 3 analyses.
+       ablation_rich       4 scenarios x 120 epochs, seed 42:
+                             legacy_baseline          end 120, max 120
+                             metabolic_generated_raf  end  48, max 133
+                             metabolic_open_chemistry end 113, max 120
+                             hybrid_transition        end  48, max 120
+
+     Label it {#tbl-p45-runs} and refer to it as @tbl-p45-runs. -->
+
+## Cleaning and harmonisation
+
+<!-- ~8 lines. State the rules explicitly - objective 1 is graded on the
+     *rules*, not on data volume:
+     - epoch alignment across files (which column is the time key);
+     - organism/type ID canonicalisation;
+     - treatment of zero-population epochs (collapse) and of a partial
+       final epoch;
+     - deduplication of flux records per (epoch, organism, reaction);
+     - what you drop and why.
+     Then one sentence on where the cleaned tables live
+     (data/clean/<run_id>/...) and one on reproducibility: seeds,
+     run_manifest.json, mechanism_manifest.json. -->
+
+## Data availability
+
+<!-- 3 lines. Point to data/raw/, data/clean/ and code/. Mention the
+     integrity checks you ran (row counts, epoch monotonicity) and
+     defer the full per-run table to @sec-app-p45-runs. -->

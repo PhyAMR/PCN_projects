@@ -1,0 +1,10 @@
+# References {-}
+
+::: {#refs}
+:::
+
+<!--
+Cite items from bibliography.bib with [@key], e.g. [@hordijk2004raf].
+The empty div above is where pandoc/Quarto will inject the formatted
+reference list when at least one citation appears in the document.
+-->

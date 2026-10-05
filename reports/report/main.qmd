@@ -1,0 +1,62 @@
+---
+title: "PoCN Final Report"
+subtitle: "Physics of Complex Networks: Structure and Dynamics"
+author: "Méndez Rodríguez de Tembleque, Álvaro"
+date: last-modified
+bibliography: bibliography.bib
+---
+
+```{=latex}
+\clearpage\pagenumbering{arabic}
+```
+
+<!--
+================================================================
+PAGE BUDGET - hard limit 10 body pages.
+Front page, references and appendices do NOT count.
+
+Documentclass is `report`, so every `# Heading` (= \chapter)
+starts on a fresh page. There are 8 chapters, so the budget is
+"one or two full pages per chapter, no half-empty pages".
+
+  PART I - Project 45 (data, score 1.2) .......... 6 pages
+    ch.1 Simulation design and trajectory data ..... 1 p
+    ch.2 Network reconstruction and statistics ..... 2 p
+    ch.3 Coupling to eco-evolutionary dynamics ..... 2 p
+    ch.4 Scenario comparison and interpretation .... 1 p
+
+  PART II - Project 24 (theory, score 0.6) ....... 4 pages
+    ch.5 Entanglement percolation and q-swap ....... 1 p
+    ch.6 Generating-function theory ................ 1 p
+    ch.7 Numerics: ER and scale-free ............... 1 p
+    ch.8 Small-world, WWW and discussion ........... 1 p
+
+Verify after every render with:  bash ../check_pages.sh
+Overflow rule: move material to the appendix, never shrink
+margins or font size.
+================================================================
+-->
+
+{{< include sections/p45_task1.qmd >}}
+
+{{< include sections/p45_task2.qmd >}}
+
+{{< include sections/p45_task3.qmd >}}
+
+{{< include sections/p45_task4.qmd >}}
+
+{{< include sections/p24_task1.qmd >}}
+
+{{< include sections/p24_task2.qmd >}}
+
+{{< include sections/p24_task3.qmd >}}
+
+{{< include sections/p24_task4.qmd >}}
+
+{{< include sections/references.qmd >}}
+
+```{=latex}
+\appendix
+```
+
+{{< include sections/appendix.qmd >}}

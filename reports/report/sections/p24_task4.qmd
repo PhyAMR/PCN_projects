@@ -1,0 +1,57 @@
+# Small-world networks and discussion
+
+**Task leader(s):** Méndez Rodríguez de Tembleque, Álvaro
+
+<!-- PAGE BUDGET: 1 page. Reproduces Fig. 3, then closes Part II.
+     Layout target: two-panel figure at ~40% of the page, rest text. -->
+
+*Project 24. A case the generating-function theory cannot reach.*
+
+## Why small-world needs simulation
+
+<!-- ~5 lines. Model: N vertices on a 1D ring, plus phi*N random
+     shortcuts. Degrees are strongly correlated, so the uncorrelated
+     G_1 factorisation of @eq-gf fails and only Monte Carlo is
+     available. Say which classical analytic curve you overlay
+     (the exact solution for the 1D small-world quoted in the paper)
+     and where it comes from. -->
+
+::: {#fig-p24-sw}
+*[figure placeholder --- `figures/p24/sw.pdf`, produced by `code/02_simulate.R`]*
+<!-- replace with: ![](../figures/p24/sw.pdf){width=100%} -->
+
+Small-world model with $2$-swap and distillation. (a) $p_c$ versus the
+shortcut density $\phi$ before and after the operation; the solid line
+is the classical analytic solution. (b) GCC size versus $p$ at
+$\phi=0.25$. Compare with Fig. 3 of [@cuquet2009entanglement].
+:::
+
+<!-- ~6 lines reading the figure: p_c drops after the 2-swap across the
+     whole phi range; quantify the reduction at two or three values of
+     phi. State how you located p_c numerically in a finite system -
+     e.g. the peak of the mean size of finite clusters, or a
+     finite-size-scaling crossing - because "we read it off the plot"
+     is the weak answer here. -->
+
+## Discussion
+
+<!-- ~12 lines. Close the project on substance, not summary:
+     - the general message: a purely LOCAL quantum strategy, using only
+       a node's degree and its neighbours' status, lowers the
+       percolation threshold across ER, scale-free, small-world and a
+       real WWW sample - in some cases by nearly an order of magnitude
+       more than the honeycomb -> triangular result on lattices;
+     - the trade-off: detached target nodes cap S~ below S even at
+       p = 1, so gains in p_c are paid for in reachable fraction;
+     - relevance for complex networks: quantum operations are a
+       mechanism that *changes the topology itself*, which has no
+       classical percolation analogue;
+     - the average path length argument: log N in most complex networks
+       versus N^{1/d} in d-dimensional lattices, so the probability of
+       establishing entanglement decays linearly rather than
+       exponentially in large finite networks;
+     - limitations you did not address: noise and amplitude damping,
+       multipartite strategies, global-knowledge protocols.
+     One sentence, at most, connecting Part II back to Part I - the two
+     projects are independent and the report should not pretend
+     otherwise. -->

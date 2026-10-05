@@ -1,0 +1,41 @@
+# Scenario comparison, interpretation, and extensions
+
+**Task leader(s):** Author name(s)...
+
+_Covers project objectives 6 and 7 — comparison between simulation scenarios (generated RAF, open chemistry, metabolic mode, legacy baseline) and discussion of which network representation is most informative — and reports any optional extensions attempted._
+
+## Scenario comparison
+
+### Legacy baseline
+
+### Metabolic with generated RAF
+
+### Metabolic with open chemistry
+
+### Hybrid transition
+
+### Cross-scenario summary
+
+## Most informative network representation
+
+### Discrimination across scenarios
+
+### Sensitivity to eco-evolutionary events
+
+## Optional extensions
+
+### Ablations across mechanism switches
+
+### Multiplex relations among reconstructed networks
+
+### Early descriptors as predictors of survival or extinction
+
+### Structural RAF vs dynamic metabolic flux
+
+### Lineage-level networks of inherited functional profiles
+
+## Limitations and outlook
+
+### Limits of scenarios, seeds, and run lengths
+
+### Directions for follow-up work
