@@ -1,0 +1,7 @@
+{
+  "config_path": "/sessions/ecstatic-wonderful-maxwell/mnt/projects/data_pprojects/data_tools/evosim_source/configs/smoke_modern_metabolic_config.json",
+  "created_at_utc": "2026-09-08T18:24:30.659933+00:00",
+  "model_mode": "modern_mechanism_engine_step11",
+  "notes": "Modern SimulationState + MechanismEngine; legacy loop is not used for this run. Fitness and ecological categories remain ex-post analyses.",
+  "seed": 42
+}

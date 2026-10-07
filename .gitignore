@@ -17,12 +17,6 @@ sources/
 
 *.html
 
-# EvoSim raw simulation output: ~208 MB, fully regenerable from
-# project_45/code/run_simulations.sh + the seeds in each run_manifest.json.
-# The cleaned tables under data/clean/ and the exported node/edge files
-# under data/networks/ are the actual deliverables and stay tracked.
-/data_pprojects/project_45/data/raw/
-
 # Data & generated outputs: kept on disk, not in git (see ~/data/README.md)
 *.pickle
 *.pkl
@@ -50,3 +44,17 @@ _freeze/
 *.fdb_latexmk
 *.fls
 .claude/
+
+# EvoSim raw simulation output (~208 MB) stays out of git. Tracked are only
+# the small files that pin each run: run_manifest.json (seed) and
+# config_snapshot.json per run, plus ablation_rich's experiment manifest,
+# spec snapshot and per-scenario configs. Regenerate with
+# project_45/code/run_simulations.sh, which needs the course's EvoSim copy
+# in data_pprojects/data_tools/evosim_source/ (pyproject 1.0.0, not tracked).
+# Kept last so it overrides the generic data/raw/ rule above.
+!/data_pprojects/project_45/data/raw/
+/data_pprojects/project_45/data/raw/*/*
+!/data_pprojects/project_45/data/raw/*/run_manifest.json
+!/data_pprojects/project_45/data/raw/*/config_snapshot.json
+!/data_pprojects/project_45/data/raw/ablation_rich/experiment_*.json
+!/data_pprojects/project_45/data/raw/ablation_rich/configs/

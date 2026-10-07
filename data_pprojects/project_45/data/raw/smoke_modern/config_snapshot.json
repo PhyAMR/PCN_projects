@@ -1,0 +1,161 @@
+{
+  "EPOCHS": 3,
+  "GRID_SIZE": 5,
+  "chemical": {
+    "CHEMICAL_COVERAGE_FRACTION": 0.5,
+    "CHEMICAL_SPACE_MAX": 3,
+    "MAX_CHEMICAL_CONCENTRATION": 100.0,
+    "MAX_INTERNAL_CHEMICAL_STORAGE": 10.0
+  },
+  "dynamic_metabolism": {
+    "basal_rate": 0.0,
+    "biomass_yield": 0.1,
+    "catalyst_abundance": 1.0,
+    "catalyst_density": 0.5,
+    "food_abundance": 1.0,
+    "maintenance_energy_per_biomass": 0.1,
+    "maintenance_energy_per_protein": 0.02,
+    "max_catalysts_per_protein": 2,
+    "max_internal_molecules_to_keep": 1000,
+    "max_rounds": 3,
+    "seed": 42,
+    "toxicity_cost_per_unit": 0.01,
+    "toxicity_molecules": [
+      "Waste"
+    ]
+  },
+  "dynamics": {
+    "engine": "modern",
+    "hybrid_metabolic_weight": 0.5,
+    "mode": "metabolic"
+  },
+  "energy": {
+    "BASE_SIZE": 1.0,
+    "ENERGY_CONSUMPTION_RATE": 1.0,
+    "FAST_MOVEMENT_COST": 3.0,
+    "INITIAL_ORGANISM_ENERGY": 100.0,
+    "INITIAL_ORGANISM_NUMBER": 3,
+    "MOVEMENT_ENERGY_COST": 1.0,
+    "PROTEIN_MAINTENANCE_COST": 0.2,
+    "REPRODUCTION_ENERGY_THRESHOLD": 150.0,
+    "SIZE_ENERGY_COST_FACTOR": 0.1
+  },
+  "functional_protein_space": {
+    "FITNESS_DECAY_EXP_PARAM_D": 0.1,
+    "FITNESS_DECAY_LIN_PARAM_D": 0.1,
+    "FITNESS_DECAY_TYPE": "exponential",
+    "MOTIF_DIVERSITY_LEVEL": 3,
+    "PROTEIN_FUNCTIONAL_SPACE_SIZE": 5
+  },
+  "genotype_phenotype_map": {
+    "capability_density": 0.25,
+    "capability_max": 1.0,
+    "capability_min": -1.0,
+    "max_features_per_protein": 2,
+    "min_features_per_protein": 0,
+    "mode": "quenched_random",
+    "seed": 42,
+    "serialize_mapping": true
+  },
+  "interaction_analysis": {
+    "classification_threshold": 0.05,
+    "max_pairwise_rows": 50000,
+    "shared_resource_from_internal_chemicals": true,
+    "spatial_distance_scale": 5.0
+  },
+  "logging": {
+    "legacy_verbose": false,
+    "quiet": true,
+    "verbose_chemical_totals": false,
+    "verbose_interaction_rules": false,
+    "verbose_organism_events": false,
+    "verbose_progress": false,
+    "write_config_snapshot": true,
+    "write_event_log": true,
+    "write_lineage_table": true,
+    "write_success_observables": true,
+    "write_type_tables": true
+  },
+  "metabolic_coupling": {
+    "basal_rate": 0.0,
+    "biomass_yield": 0.1,
+    "catalyst_abundance": 1.0,
+    "catalyst_density": 0.5,
+    "food_abundance": 1.0,
+    "max_catalysts_per_protein": 2,
+    "max_rounds": 3,
+    "seed": 42
+  },
+  "modern_engine": {
+    "death_biomass_threshold": 0.05,
+    "death_energy_threshold": 0.0,
+    "division_biomass_threshold": 1.1,
+    "division_energy_threshold": 100.5,
+    "uptake_per_molecule": 1.0
+  },
+  "modules": {
+    "autocatalytic_set_detection": true,
+    "communication": true,
+    "compartment_metabolism": true,
+    "death": true,
+    "dynamic_metabolism": true,
+    "ecological_interactions": true,
+    "energy_biomass_budget": true,
+    "event_logging": true,
+    "genotype_phenotype_mapping": true,
+    "lineage_tracking": true,
+    "maintenance_costs": false,
+    "mass_conservation_checks": false,
+    "metabolic_coupling": true,
+    "metabolic_dynamics_integration": true,
+    "movement": true,
+    "network_growth": true,
+    "protein_chemical_interactions": false,
+    "protein_protein_interactions": false,
+    "reaction_network": true,
+    "reproduction": true,
+    "size_growth": false,
+    "theoretical_analysis": true,
+    "uptake": false
+  },
+  "protein": {
+    "PROTEIN_CHANGE_PROBABILITIES": {
+      "deletion": 0.01,
+      "insertion": 0.01,
+      "mutation": 0.02
+    },
+    "PROTEIN_CHEMICAL_INTERACTION_MAX": 3,
+    "PROTEIN_CHEMICAL_INTERACTION_MIN": 1,
+    "PROTEIN_FUNCTIONAL_MUTATIONS_MAX": 3,
+    "PROTEIN_FUNCTIONAL_MUTATIONS_MIN": 1,
+    "PROTEIN_INTERACTION_TYPE_PROBABILITIES": {
+      "antagonistic": 0.1,
+      "complementary": 0.25,
+      "cooperative": 0.25,
+      "inhibitory": 0.2,
+      "redundant": 0.2
+    },
+    "PROTEIN_LENGTH": 10,
+    "PROTEIN_PROTEIN_FUNCTIONAL_INTERACTION_PROBABILITY": 0.02,
+    "PROTEIN_TO_FEATURES_MAX": 5,
+    "PROTEIN_TO_FEATURES_MIN": 1
+  },
+  "reaction_network": {
+    "catalyst_probability": 0.35,
+    "couple_to_legacy_dynamics": false,
+    "detect_autocatalytic_sets": true,
+    "max_products": 2,
+    "max_substrates": 2,
+    "mode": "generated_raf",
+    "n_food": 3,
+    "n_molecules": 12,
+    "n_reactions": 24,
+    "seed": 42,
+    "write_graphml": true
+  },
+  "seed": 42,
+  "theoretical_analysis": {
+    "min_qess_duration": 2,
+    "turnover_threshold": 0.25
+  }
+}

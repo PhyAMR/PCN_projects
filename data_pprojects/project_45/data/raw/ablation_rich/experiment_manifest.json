@@ -1,0 +1,10 @@
+{
+  "n_failed": 0,
+  "n_runs": 4,
+  "n_scenarios": 4,
+  "n_seeds": 1,
+  "output_dir": "/sessions/ecstatic-wonderful-maxwell/mnt/projects/data_pprojects/project_45/data/raw/ablation_rich",
+  "principle": "Scenarios are mechanism patches.",
+  "spec_path": "/sessions/ecstatic-wonderful-maxwell/mnt/projects/data_pprojects/project_45/code/configs/ablation_rich.json",
+  "status": "passed"
+}

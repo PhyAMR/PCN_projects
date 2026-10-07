@@ -1,0 +1,73 @@
+{
+  "base_config": "configs/rich_punctuated_multispecies_config.json",
+  "description": "Project 45 ablation rebased on the rich multispecies config so legacy / generated-RAF / open-chemistry / hybrid scenarios are compared at a scientifically meaningful run length instead of the 3-epoch smoke default.",
+  "epochs": 120,
+  "modules": {
+    "theoretical_analysis": true
+  },
+  "output_dir": "runs/ablation_rich",
+  "scenarios": {
+    "hybrid_transition": {
+      "description": "Technical transition mode mixing legacy and metabolic energy updates.",
+      "patch": {
+        "dynamics.hybrid_metabolic_weight": 0.5,
+        "dynamics.mode": "hybrid",
+        "modules.dynamic_metabolism": true,
+        "modules.metabolic_coupling": true,
+        "modules.metabolic_dynamics_integration": true,
+        "modules.protein_chemical_interactions": false,
+        "modules.protein_protein_interactions": false,
+        "modules.reaction_network": true
+      }
+    },
+    "legacy_baseline": {
+      "description": "Historical phenomenological baseline with direct protein-chemical energy updates.",
+      "patch": {
+        "dynamics.mode": "legacy",
+        "modules.dynamic_metabolism": false,
+        "modules.maintenance_costs": true,
+        "modules.metabolic_coupling": false,
+        "modules.metabolic_dynamics_integration": false,
+        "modules.protein_chemical_interactions": true,
+        "modules.protein_protein_interactions": true,
+        "modules.reaction_network": false,
+        "modules.size_growth": true,
+        "modules.uptake": true
+      }
+    },
+    "metabolic_generated_raf": {
+      "description": "Metabolic dynamics with a generated RAF-like reaction-network benchmark.",
+      "patch": {
+        "dynamics.mode": "metabolic",
+        "modules.autocatalytic_set_detection": true,
+        "modules.dynamic_metabolism": true,
+        "modules.maintenance_costs": false,
+        "modules.metabolic_coupling": true,
+        "modules.metabolic_dynamics_integration": true,
+        "modules.protein_chemical_interactions": false,
+        "modules.protein_protein_interactions": false,
+        "modules.reaction_network": true,
+        "modules.size_growth": false,
+        "modules.uptake": false,
+        "reaction_network.mode": "generated_raf"
+      }
+    },
+    "metabolic_open_chemistry": {
+      "description": "Metabolic dynamics with open random chemistry; RAF-like closure may or may not appear.",
+      "patch": {
+        "dynamics.mode": "metabolic",
+        "modules.autocatalytic_set_detection": true,
+        "modules.dynamic_metabolism": true,
+        "modules.maintenance_costs": false,
+        "modules.metabolic_coupling": true,
+        "modules.metabolic_dynamics_integration": true,
+        "modules.protein_chemical_interactions": false,
+        "modules.protein_protein_interactions": false,
+        "modules.reaction_network": true,
+        "modules.size_growth": false,
+        "modules.uptake": false,
+        "reaction_network.mode": "open_chemistry"
+      }
+    }
+  }
+}
